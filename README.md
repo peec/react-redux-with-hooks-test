@@ -1,3 +1,16 @@
+Proof of concept, hooks with react-redux@7.1.0-alpha.1.
+
+See:
+
+- src/App.js
+- src/components/articles.jsx 
+- src/components/article-form.jsx
+- src/components/mouse-render.jsx
+
+
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
