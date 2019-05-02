@@ -9,9 +9,9 @@ export default function ArticleList() {
       <h1>Articles</h1>
       {articles.map(article => (
         <div key={article.id}>
-          <h2>
+          <h5>
             {article.title} (id: {article.id})
-          </h2>
+          </h5>
           <p>{article.body}</p>
         </div>
       ))}

@@ -1,24 +1,20 @@
-import React, { useState } from 'react'
-import { useActions } from 'react-redux'
+import React, { useState, useCallback } from 'react'
+import { useDispatch } from 'react-redux'
 import { addArticle } from '../actions'
 
-// A form to add articles. (note useActions is deprecated in v7.1.0-alpha.4).
+// A form to add articles.
 export default function ArticleForm() {
+  const dispatch = useDispatch()
   const [title, setTitle] = useState('')
   const [body, setBody] = useState('')
 
-  const { createArticle } = useActions(
-    {
-      createArticle: (title, body) => {
-        // Lets reset the values in the form
-        setTitle('')
-        setBody('')
-        // And send action.
-        return addArticle({ title, body })
-      },
-    },
-    [],
-  )
+  // Note: useCallback is used only for performance. So we dont redefine the callback every render (deps: empty array).
+  const createArticle = useCallback((title, body) => {
+    // Lets reset the values in the form
+    setTitle('')
+    setBody('')
+    return dispatch(addArticle({ title, body }))
+  }, [])
 
   return (
     <div>

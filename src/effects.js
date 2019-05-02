@@ -6,8 +6,12 @@ export function useMousePosition() {
     setMousePosition({ x: e.clientX, y: e.clientY })
   }
 
+  // useEffect runs only once depending on the "deps" which is empty array.
   React.useEffect(() => {
+    // Same as: componentDidMount + componentDidUpdate
     window.addEventListener('mousemove', handleMouseMove)
+
+    // The cleanup function is same as: componentWillUnmount
     return () => {
       window.removeEventListener('mousemove', handleMouseMove)
     }

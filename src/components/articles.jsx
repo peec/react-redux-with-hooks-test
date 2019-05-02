@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { useRedux } from 'react-redux'
 import { addArticle } from '../actions'
 
-// A form to add articles, and a list of articles.
+// A form to add articles, and a list of articles. Note: "useRedux" is deprecated as of v7.1.0-alpha.3 .
 export default function Articles() {
   const [title, setTitle] = useState('')
   const [body, setBody] = useState('')

@@ -4,23 +4,35 @@ import store from './store'
 import { MouseRender } from './components/mouse-render'
 import Articles from './components/articles'
 import ArticleForm from './components/article-form'
+import ArticleFormDispatch from './components/article-form-dispatch'
 import ArticleList from './components/article-list'
 
 function App() {
   return (
     <Provider store={store}>
       <div className="App">
-        <h1>1. Simple example (no redux with React.useEffect and React.useState).</h1>
-        <MouseRender />
+        <div>
+          <h1>1. Simple example (no redux with React.useEffect and React.useState).</h1>
+          <MouseRender />
+        </div>
 
-        <h1>2. Redux example: using "useRedux" hook.</h1>
-        <Articles />
+        <div>
+          <h1>2. Redux example: using "useRedux" hook</h1>
+          <p>
+            <code>useRedux</code> is deperecated in v7.1.0-alpha.3.
+          </p>
+          <Articles />
+        </div>
 
-        <h1>3. Redux example: using separate components with "useState", "useActions".</h1>
+        <div>
+          <h1>3. Redux example: using separate components with "useState", "useActions".</h1>
+          <p>
+            <code>useActions</code> is deperecated in v7.1.0-alpha.3.
+          </p>
+          <ArticleForm />
 
-        <ArticleForm />
-
-        <ArticleList />
+          <ArticleList />
+        </div>
       </div>
     </Provider>
   )
