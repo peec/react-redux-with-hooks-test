@@ -1,11 +1,24 @@
-Proof of concept, hooks with react-redux@7.1.0-alpha.1.
+Proof of concept, hooks with  react-redux as of 7.1.0-alpha.4.
 
-See:
 
-- src/App.js
-- src/components/articles.jsx 
-- src/components/article-form.jsx
-- src/components/mouse-render.jsx
+https://react-redux.js.org/next/api/hooks
+
+3 new hooks:
+
+- useSelector()
+- useDispatch()
+- useStore()
+
+We will look at:
+
+- useSelector()
+- useDispatch()
+
+We will also look at deprecated hooks (as of alpha.4 of 7.1.0):
+
+- useRedux()
+- useActions()
+
 
 
 
