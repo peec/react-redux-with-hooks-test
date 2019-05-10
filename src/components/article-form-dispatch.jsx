@@ -8,7 +8,7 @@ export default function ArticleForm() {
   const [title, setTitle] = useState('')
   const [body, setBody] = useState('')
 
-  // Note: useCallback is used only for performance. So we dont redefine the callback every render (deps: empty array).
+  // Note: useCallback is used only for performance. So we dont redefine the callback every render.
   const createArticle = useCallback(
     (title, body) => {
       // Lets reset the values in the form
