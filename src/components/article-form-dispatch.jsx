@@ -14,7 +14,7 @@ export default function ArticleForm() {
       // Lets reset the values in the form
       setTitle('')
       setBody('')
-      return dispatch(addArticle({ title, body }))
+      dispatch(addArticle({ title, body }))
     },
     [dispatch],
   )
