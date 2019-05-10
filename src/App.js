@@ -17,17 +17,23 @@ function App() {
         </div>
 
         <div>
-          <h1>2. Redux example: using "useRedux" hook</h1>
+          <h1>2. Redux example: using separate components with "useSelector", "useDispatch".</h1>
+          <ArticleFormDispatch />
+
+          <ArticleList />
+        </div>
+        <div>
+          <h1>3. Redux example: using "useRedux" hook</h1>
           <p>
-            <code>useRedux</code> is deperecated in v7.1.0-alpha.3.
+            <code>useRedux</code> is deprecated in v7.1.0-alpha.3.
           </p>
           <Articles />
         </div>
 
         <div>
-          <h1>3. Redux example: using separate components with "useState", "useActions".</h1>
+          <h1>4. Redux example: using separate components with "useSelector", "useActions".</h1>
           <p>
-            <code>useActions</code> is deperecated in v7.1.0-alpha.3.
+            <code>useActions</code> is deprecated in v7.1.0-alpha.4.
           </p>
           <ArticleForm />
 

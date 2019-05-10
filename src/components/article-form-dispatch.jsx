@@ -9,12 +9,15 @@ export default function ArticleForm() {
   const [body, setBody] = useState('')
 
   // Note: useCallback is used only for performance. So we dont redefine the callback every render (deps: empty array).
-  const createArticle = useCallback((title, body) => {
-    // Lets reset the values in the form
-    setTitle('')
-    setBody('')
-    return dispatch(addArticle({ title, body }))
-  }, [])
+  const createArticle = useCallback(
+    (title, body) => {
+      // Lets reset the values in the form
+      setTitle('')
+      setBody('')
+      return dispatch(addArticle({ title, body }))
+    },
+    [dispatch],
+  )
 
   return (
     <div>
